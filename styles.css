@@ -1,0 +1,381 @@
+:root {
+  --text: #1a1a1a;
+  --mid: #6b6560;
+  --faint: #a09891;
+  --line: #e0dbd5;
+  --paper: #f8f6f3;
+  --wash: #efecea;
+  --accent: #7aab94;
+  --accent-strong: #2d6b4a;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+  --font-display: "Cormorant Garant", Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--accent-strong);
+  text-decoration: none;
+  transition: color 160ms ease, background-color 160ms ease;
+}
+
+a:hover {
+  color: #1d4d34;
+  background: rgba(45, 107, 74, 0.08);
+}
+
+.highlight {
+  color: var(--accent-strong);
+}
+
+.page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: clamp(36px, 6vw, 68px) clamp(22px, 5vw, 52px) 80px;
+}
+
+/* ── Top grid ─────────────────────────────── */
+
+.top-grid {
+  display: grid;
+  grid-template-columns: minmax(190px, 240px) minmax(0, 1fr);
+  gap: clamp(32px, 5vw, 60px);
+  align-items: start;
+}
+
+.profile {
+  align-self: start;
+}
+
+.avatar {
+  width: 52%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+  margin: 0 0 22px;
+  background: var(--wash);
+  border-radius: 50%;
+}
+
+.profile h1 {
+  margin: 0 0 4px;
+  font-family: var(--font-body);
+  font-size: clamp(17px, 1.7vw, 22px);
+  line-height: 1.15;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.name-cn {
+  margin: 0 0 4px;
+  font-size: 13.5px;
+  font-weight: 400;
+  color: var(--mid);
+}
+
+.role {
+  margin: 0 0 4px;
+  font-size: 13.5px;
+  font-weight: 400;
+  color: var(--mid);
+}
+
+.profile-list,
+.links,
+.skills {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.profile-list {
+  display: grid;
+  gap: 4px;
+  color: var(--mid);
+  font-size: 13.5px;
+  font-weight: 400;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  margin-top: 4px;
+  font-size: 13.5px;
+  font-weight: 400;
+}
+
+.links a + a::before {
+  content: "/";
+  margin-right: 10px;
+  color: var(--faint);
+  font-weight: 300;
+}
+
+/* ── Main content ─────────────────────────── */
+
+.content {
+  min-width: 0;
+  padding-top: 4px;
+}
+
+.intro {
+  max-width: 680px;
+}
+
+.intro p {
+  margin: 0 0 16px;
+  font-size: clamp(14.5px, 1.25vw, 16px);
+  line-height: 1.72;
+  font-weight: 400;
+  color: var(--text);
+}
+
+.intro strong {
+  font-weight: 600;
+}
+
+.skills-block {
+  margin-top: 28px;
+}
+
+.skills-block h2 {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  gap: 5px 24px;
+  margin-top: 10px;
+  font-size: 13.5px;
+  line-height: 1.55;
+  font-weight: 400;
+  color: var(--mid);
+}
+
+.skills li::before {
+  content: "– ";
+  color: var(--accent);
+}
+
+/* ── Publications ─────────────────────────── */
+
+.publications {
+  margin-top: clamp(44px, 6vw, 68px);
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 24px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.pub-group {
+  display: grid;
+  grid-template-columns: minmax(130px, 180px) minmax(0, 1fr);
+  gap: 24px;
+  padding: 22px 0;
+  border-top: 1px solid var(--line);
+}
+
+.pub-group:first-of-type {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.group-kicker {
+  margin: 4px 0 0;
+  color: var(--accent-strong);
+  font-size: 10px;
+  line-height: 1.4;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.pub-group h3 {
+  grid-column: 2;
+  margin: 0 0 12px;
+  font-family: var(--font-display);
+  font-size: clamp(15px, 1.3vw, 18px);
+  line-height: 1.38;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--text);
+}
+
+.paper {
+  grid-column: 2;
+  position: relative;
+  padding-left: 14px;
+}
+
+.paper + .paper {
+  margin-top: 13px;
+}
+
+.paper::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.paper h4 {
+  margin: 0;
+  font-size: clamp(13px, 1.05vw, 14.5px);
+  line-height: 1.48;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.paper p {
+  margin: 3px 0 0;
+  color: var(--faint);
+  font-size: clamp(12px, 0.95vw, 13px);
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.paper .venue {
+  margin-top: 8px;
+  font-style: italic;
+}
+
+/* ── Responsive ───────────────────────────── */
+
+@media (max-width: 860px) {
+  .top-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .profile {
+    display: grid;
+    grid-template-columns: 110px minmax(0, 1fr);
+    gap: 18px;
+    align-items: end;
+  }
+
+  .avatar {
+    grid-row: span 5;
+    width: 100%;
+    margin: 0;
+  }
+
+  .profile h1,
+  .name-cn,
+  .role,
+  .profile-list,
+  .links {
+    grid-column: 2;
+  }
+
+  .profile h1 {
+    font-size: 22px;
+  }
+
+  .name-cn {
+    margin-top: 0;
+  }
+
+  .role {
+    margin-bottom: 0;
+  }
+
+  .content {
+    padding-top: 0;
+  }
+
+  .intro p {
+    font-size: 15px;
+  }
+
+  .skills {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .pub-group {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .pub-group h3,
+  .paper {
+    grid-column: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding-inline: 18px;
+  }
+
+  .profile {
+    grid-template-columns: 1fr;
+  }
+
+  .avatar,
+  .profile h1,
+  .name-cn,
+  .role,
+  .profile-list,
+  .links {
+    grid-column: 1;
+  }
+
+  .avatar {
+    width: 65%;
+    max-width: 200px;
+  }
+
+  .profile h1 {
+    font-size: 22px;
+  }
+}
