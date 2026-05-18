@@ -209,7 +209,7 @@ a:hover {
 .pub-group {
   display: grid;
   grid-template-columns: minmax(130px, 220px) minmax(0, 1fr);
-  gap: 24px;
+  gap: 24px 24px;
   padding: 22px 0;
   border-top: 1px solid var(--line);
 }
@@ -230,8 +230,8 @@ a:hover {
 }
 
 .pub-group h3 {
-  grid-column: 2;
-  margin: 0 0 12px;
+  grid-column: 1 / -1;
+  margin: 0 0 4px;
   font-family: var(--font-display);
   font-size: clamp(15px, 1.3vw, 18px);
   line-height: 1.38;
@@ -242,24 +242,12 @@ a:hover {
 
 .paper {
   grid-column: 2;
-  position: relative;
-  padding-left: 14px;
 }
 
 .paper + .paper {
   margin-top: 13px;
 }
 
-.paper::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.72em;
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: var(--accent);
-}
 
 .paper h4 {
   margin: 0;
@@ -278,8 +266,32 @@ a:hover {
 }
 
 .paper .venue {
-  margin-top: 8px;
+  margin-top: 3px;
   font-style: italic;
+}
+
+.paper-links {
+  display: flex;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.paper-link {
+  display: inline-block;
+  padding: 1px 7px;
+  border-radius: 4px;
+  border: 1px solid var(--accent);
+  color: var(--accent-strong);
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  background: transparent;
+  transition: background 160ms ease, color 160ms ease;
+}
+
+.paper-link:hover {
+  background: var(--accent);
+  color: #fff;
 }
 
 .paper-teaser {
@@ -343,6 +355,57 @@ a:hover {
 
 .lightbox-close:hover {
   background: rgba(255, 255, 255, 0.28);
+}
+
+.lightbox-img {
+  transition: transform 200ms ease;
+  transform-origin: center center;
+}
+
+.lightbox-controls {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 6px 14px;
+}
+
+.lightbox-zoom-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: transparent;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 160ms ease;
+  padding: 0;
+}
+
+.lightbox-zoom-btn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.lightbox-zoom-btn:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.lightbox-zoom-level {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 12px;
+  font-family: var(--font-body);
+  min-width: 36px;
+  text-align: center;
 }
 
 /* Explicit row placement so images sit beside their papers */
