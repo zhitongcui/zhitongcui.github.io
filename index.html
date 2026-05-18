@@ -79,13 +79,15 @@
             <h2 id="publications-title">Research</h2>
           </div>
 
-          <article class="pub-group">
+          <article class="pub-group pub-group--teasers">
             <h3>Physics-simulation-driven re-editing of AI-generated 3D content</h3>
+            <img class="paper-teaser" src="teasers/VR-Doh-teaser.png" alt="VR-Doh teaser" />
             <div class="paper">
               <h4>VR-Doh: Hands-on 3D Modeling in Virtual Reality</h4>
               <p>Zhaofeng Luo*, <strong>Zhitong Cui</strong>* (equal contributions), Shijian Luo, Mengyu Chu, Minchen Li</p>
               <p class="venue">ACM Transactions on Graphics (SIGGRAPH), 2025</p>
             </div>
+            <img class="paper-teaser" src="teasers/RMM-teaser.png" alt="Robotic Metamaterials teaser" />
             <div class="paper">
               <h4>
                 Robotic Metamaterials: An Integrated Modular Approach for
@@ -96,8 +98,9 @@
             </div>
           </article>
 
-          <article class="pub-group">
+          <article class="pub-group pub-group--teasers">
             <h3>Leveraging physical simulation as prior knowledge to enhance 3D content fabricability</h3>
+            <img class="paper-teaser" src="teasers/RoamFab-teaser.jpg" alt="RoamFab teaser" />
             <div class="paper">
               <h4>
                 RoamFab: A Design Tool for Reconfiguring Parameterized
@@ -106,6 +109,7 @@
               <p><strong>Zhitong Cui</strong>, Jiancheng Gu, Ting Chen, Yang Lu, Preben Hansen, Shijian Luo</p>
               <p class="venue">International Journal of Human-Computer Interaction</p>
             </div>
+            <img class="paper-teaser" src="teasers/OlfacKit-teaser.jpg" alt="OlfacKit teaser" />
             <div class="paper">
               <h4>
                 OlfacKit: A Toolkit for Integrating Atomization-Based Olfactory
@@ -114,6 +118,7 @@
               <p>Yanan Wang*, <strong>Zhitong Cui</strong>* (equal contributions), Hebo Gong, Ting Chen</p>
               <p class="venue">International Journal of Human-Computer Interaction.</p>
             </div>
+            <img class="paper-teaser" src="teasers/MiuraKit-teaser.png" alt="MiuraKit teaser" />
             <div class="paper">
               <h4>
                 MiuraKit: A Modular Hands-On Construction Kit For Pneumatic
@@ -122,6 +127,7 @@
               <p><strong>Zhitong Cui</strong>, Shuhong Wang, Junxian Li, Shijian Luo, Alexandra Ion</p>
               <p class="venue">Proceedings of the 2023 ACM Designing Interactive Systems Conference</p>
             </div>
+            <img class="paper-teaser" src="teasers/ConeAct-teaser.png" alt="ConeAct teaser" />
             <div class="paper">
               <h4>ConeAct: A Multistable Actuator for Dynamic Materials</h4>
               <p>Yuyu Lin, Jesse T Gonzalez, <strong>Zhitong Cui</strong>, Yash Rajeev Banka, Alexandra Ion</p>
@@ -130,8 +136,9 @@
           </article>
 
 
-          <article class="pub-group">
+          <article class="pub-group pub-group--teasers">
             <h3>Interaction and experience design</h3>
+            <img class="paper-teaser" src="teasers/In-Car-Voice-User-%20Interface-teaser.jpg" alt="In-Car Voice UI teaser" />
             <div class="paper">
               <h4>
                 Enhancing Interactions for In-Car Voice User Interface with
@@ -140,14 +147,16 @@
               <p><strong>Zhitong Cui</strong>, Hebo Gong, Yanan Wang, Chengyi Shen, Wenyin Zou, and Shijian Luo</p>
               <p class="venue">13th International Conference on Automotive User Interfaces and Interactive Vehicular Applications (Top 5% honorable mentioned)</p>
             </div>
+            <img class="paper-teaser" src="teasers/eGlove-teaser.jpg" alt="eGlove teaser" />
             <div class="paper">
               <h4>
                 eGlove: Designing Interactive Fabric Sensor for Enhancing
                 Contact-Based Interactions
               </h4>
-              <p>Hebo Gong, <strong>Zhitong Cui</strong>, Yanan Wang, Chengyi Shen, Deyin Zhang, and Shijian Luo</p> 
+              <p>Hebo Gong, <strong>Zhitong Cui</strong>, Yanan Wang, Chengyi Shen, Deyin Zhang, and Shijian Luo</p>
               <p class="venue">Extended Abstracts of the 2021 CHI Conference on Human Factors in Computing Systems. CCF-A, second author.</p>
             </div>
+            <img class="paper-teaser" src="teasers/Sankey-Diagram-teaser.jpg" alt="Sankey Diagram teaser" />
             <div class="paper">
               <h4>
                 Designing Spatial Visualization and Interactions of Immersive
@@ -158,8 +167,9 @@
             </div>
           </article>
 
-          <article class="pub-group">
+          <article class="pub-group pub-group--teasers">
             <h3>Design sketch generation via generative adversarial networks</h3>
+            <img class="paper-teaser" src="teasers/GAN-teaser.png" alt="GAN teaser" />
             <div class="paper">
               <h4>
                 A Human-AI Collaborative Ideation Tool for Designing High-Speed
@@ -171,5 +181,39 @@
           </article>
       </section>
     </main>
+
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image preview">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Close">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="3" y1="3" x2="17" y2="17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <line x1="17" y1="3" x2="3" y2="17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <img class="lightbox-img" id="lightbox-img" src="" alt="" />
+    </div>
+
+    <script>
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const lightboxClose = document.getElementById('lightbox-close');
+
+      document.querySelectorAll('.paper-teaser').forEach(img => {
+        img.addEventListener('click', () => {
+          lightboxImg.src = img.src;
+          lightboxImg.alt = img.alt;
+          lightbox.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+
+      function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+
+      lightboxClose.addEventListener('click', closeLightbox);
+      lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+    </script>
   </body>
 </html>
