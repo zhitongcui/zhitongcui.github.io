@@ -561,7 +561,7 @@ a:hover {
 
   .pub-group {
     grid-template-columns: 1fr;
-    gap: 6px;
+    gap: 14px;
   }
 
   .pub-group h3,
@@ -570,8 +570,8 @@ a:hover {
   }
 
   .pub-group--teasers > h3,
-  .pub-group--teasers > img,
-  .pub-group--teasers > .paper {
+  .pub-group--teasers > img:nth-of-type(n),
+  .pub-group--teasers > .paper:nth-of-type(n) {
     grid-column: 1;
     grid-row: auto;
   }
@@ -579,6 +579,10 @@ a:hover {
   .paper-teaser {
     max-width: 160px;
     aspect-ratio: 4 / 3;
+  }
+
+  .paper + .paper {
+    margin-top: 18px;
   }
 }
 
