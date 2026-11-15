@@ -20,6 +20,7 @@ Interests / Skills
 ## Publications
 
 1. 动力学仿真驱动的对 AI 生成 3D 内容的再编辑
+[Proxy3D: Interactive Spatial Proxies for Multi-View Consistent 3D Concept Design](https://dl.acm.org/doi/10.1145/3830398.3830634). ACM Symposium on User Interface Software and Technology (UIST), 2026.
 VR-Doh: Hands-on 3D Modeling in Virtual Reality. ACM Transactions on Graphics 2025. (CCF-A, 共同一作)
 2. 将物理仿真作为先验知识提高 3D 内容的可制造性
 RoamFab: A Design Tool for Reconfiguring Parameterized Mechanisms to 3D Models with Structural Optimization. International Journal of Human–Computer Interaction. (CCF-B, 学生一作)
@@ -31,12 +32,19 @@ Robotic Metamaterials: An Integrated Modular Approach for Creating Hands-on Robo
 4. 基于对抗神经网络的设计草图生成
 A Human-AI Collaborative Ideation Tool for Designing High-Speed Rails based on Generative Adversarial Networks. Journal of Mechanical Engineering 2023. (中国科协 T1 级期刊, 学生一作)
 5. 交互与体验设计
+[KnowTap: A Knowledge-Driven Tool for Fine-Grained Tappability Assessment and Design Iteration of Mobile UIs](https://dl.acm.org/doi/epdf/10.1145/3830398.3830517). ACM Symposium on User Interface Software and Technology (UIST), 2026.
 Enhancing Interactions for In-Car Voice User Interface with Gestural Input on the Steering Wheel. 13th International Conference on Automotive User Interfaces and Interactive Vehicular Applications. (人车交互领域顶会, Top 5%荣誉提名奖, 第一作者)
 eGlove: Designing Interactive Fabric Sensor for Enhancing Contact-Based Interactions. Extended Abstracts of the 2021 CHI Conference on Human Factors in Computing Systems. (CCF-A, 第二作者)
 Designing Spatial Visualization and Interactions of Immersive Sankey Diagram in Virtual Reality. Proceedings of the 31st ACM International Conference on Multimedia. 2024. (CCF-A, 第三作者)
 
 
 ## Abstracts
+
+Proxy3D: Interactive Spatial Proxies for Multi-View Consistent 3D Concept Design
+Abstract: Proxy3D helps designers turn targeted edits to 2D views into updates to a 3D concept. An inferred spatial proxy supports preview and local editing, while a camera trajectory guides video-to-3D generation to improve consistency across views.
+
+KnowTap: A Knowledge-Driven Tool for Fine-Grained Tappability Assessment and Design Iteration of Mobile UIs
+Abstract: KnowTap is a Figma-compatible tool that estimates how tappable mobile UI elements look. It displays perceived tappability scores in six bands and offers optional feedback from a language model to help designers refine their interfaces.
 
 VR-Doh: Hands-on 3D Modeling in Virtual Reality
 Abstract: We introduce VR-Doh, an open-source, hands-on 3D modeling system that enables intuitive creation and manipulation of elastoplastic objects in Virtual Reality (VR). By customizing the Material Point Method (MPM) for real-time simulation of hand-induced large deformations and enhancing 3D Gaussian Splatting for seamless rendering, VR-Doh provides an interactive and immersive 3D modeling experience. Users can naturally sculpt, deform, and edit objects through both contact- and gesture-based hand-object interactions. To achieve real-time performance, our system incorporates localized simulation techniques, particle-level collision handling, and the decoupling of physical and appearance representations, ensuring smooth and responsive interactions. VR-Doh supports both object creation and editing, enabling diverse modeling tasks such as designing food items, characters, and interlocking structures, all resulting in simulation-ready assets. User studies with both novice and experienced participants highlight the system’s intuitive design, immersive feedback, and creative potential. Compared to existing geometric modeling tools, VR-Doh offers enhanced accessibility and natural interaction, making it a powerful tool for creative exploration in VR.

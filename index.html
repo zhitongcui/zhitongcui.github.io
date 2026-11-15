@@ -120,6 +120,16 @@
           <div id="tab-research" role="tabpanel" aria-labelledby="tab-btn-research">
           <article class="pub-group pub-group--teasers">
             <h3>Physics-simulation-driven re-editing of AI-generated 3D content</h3>
+            <img class="paper-teaser" src="teasers/Proxy3D-teaser.png" alt="Proxy3D teaser" />
+            <div class="paper">
+              <h4>Proxy3D: Interactive Spatial Proxies for Multi-View Consistent 3D Concept Design</h4>
+              <p>Jingsen Zhang, Yao Wang, Renzhong Li, <strong>Zhitong Cui</strong>, Chengyi Shen, Dongming Han, and Shijian Luo</p>
+              <p class="venue">ACM Symposium on User Interface Software and Technology (UIST), 2026</p>
+              <div class="paper-links">
+                <a class="paper-link" target="_blank" rel="noreferrer" href="https://dl.acm.org/doi/10.1145/3830398.3830634">Paper</a>
+                <a class="paper-link" target="_blank" rel="noreferrer" href="https://www.youtube.com/watch?v=RppJtibHeyk">Video</a>
+              </div>
+            </div>
             <img class="paper-teaser" src="teasers/VR-Doh-teaser.jpg" alt="VR-Doh teaser" />
             <div class="paper">
               <h4>VR-Doh: Hands-on 3D Modeling in Virtual Reality</h4>
@@ -199,7 +209,17 @@
 
 
           <article class="pub-group pub-group--teasers">
-            <h3>Interaction and experience design</h3>
+            <h3>Interaction Techniques</h3>
+            <img class="paper-teaser" src="teasers/KnowTap-teaser.png" alt="KnowTap teaser" />
+            <div class="paper">
+              <h4>KnowTap: A Knowledge-Driven Tool for Fine-Grained Tappability Assessment and Design Iteration of Mobile UIs</h4>
+              <p>Chang’ao Liu, Chengyi Shen, <strong>Zhitong Cui</strong>, Yao Wang, and Shijian Luo</p>
+              <p class="venue">ACM Symposium on User Interface Software and Technology (UIST), 2026</p>
+              <div class="paper-links">
+                <a class="paper-link" target="_blank" rel="noreferrer" href="https://dl.acm.org/doi/epdf/10.1145/3830398.3830517">Paper</a>
+                <a class="paper-link" target="_blank" rel="noreferrer" href="https://www.youtube.com/watch?v=1YLh4_Gdu8w">Video</a>
+              </div>
+            </div>
             <img class="paper-teaser" src="teasers/In-Car-Voice-User-%20Interface-teaser.jpg" alt="In-Car Voice UI teaser" />
             <div class="paper">
               <h4>
@@ -303,6 +323,8 @@
       const zoomLevel = document.getElementById('zoom-level');
 
       const abstracts = {
+        'teasers/KnowTap-teaser.png': "KnowTap is a Figma-compatible tool that estimates how tappable mobile UI elements look. It displays perceived tappability scores in six bands and offers optional feedback from a language model to help designers refine their interfaces.",
+        'teasers/Proxy3D-teaser.png': "Proxy3D helps designers turn targeted edits to 2D views into updates to a 3D concept. An inferred spatial proxy supports preview and local editing, while a camera trajectory guides video-to-3D generation to improve consistency across views.",
         'teasers/VR-Doh-teaser.jpg': 'We introduce VR-Doh, an open-source, hands-on 3D modeling system that enables intuitive creation and manipulation of elastoplastic objects in Virtual Reality (VR). By customizing the Material Point Method (MPM) for real-time simulation of hand-induced large deformations and enhancing 3D Gaussian Splatting for seamless rendering, VR-Doh provides an interactive and immersive 3D modeling experience. Users can naturally sculpt, deform, and edit objects through both contact- and gesture-based hand-object interactions. To achieve real-time performance, our system incorporates localized simulation techniques, particle-level collision handling, and the decoupling of physical and appearance representations, ensuring smooth and responsive interactions. VR-Doh supports both object creation and editing, enabling diverse modeling tasks such as designing food items, characters, and interlocking structures, all resulting in simulation-ready assets. User studies with both novice and experienced participants highlight the system\'s intuitive design, immersive feedback, and creative potential. Compared to existing geometric modeling tools, VR-Doh offers enhanced accessibility and natural interaction, making it a powerful tool for creative exploration in VR.',
         'teasers/RMM-teaser.jpg': 'We propose augmenting initially passive structures built from simple repeated cells, with novel active units to enable dynamic, shape-changing, and robotic applications. Inspired by metamaterials that can employ mechanisms, we build a framework that allows users to configure cells of this passive structure to allow it to perform complex tasks. A key benefit is that our structures can be repeatedly (re)configured by users inserting our configuration units to turn the passive material into, e.g., locomotion robots, integrated motion platforms, or interactive interfaces. To this end, we present a mechanical system consisting of a flexible, passive, shearing lattice structure, as well as rigid and active unit cells to be inserted into the lattice for configuration. The active unit is a closed-loop pneumatically controlled shearing cell to dynamically actuate the macroscopic movement of the structure. The passive rigid cells redirect the forces to create complex motion with a reduced number of active cells. Since the placement of the rigid and active units is challenging, we offer a computational design tool that optimizes the cell placement to match the macroscopic, user-defined target motions and generates the control code for the active cells.',
         'teasers/RoamFab-teaser.jpeg': 'Creating personalized 3D printing objects has become increasingly popular with the advance in end-user modeling tools and fabrication techniques. However, it remains challenging for novice makers to design and fabricate functional objects with mechanical motion such as linear or rotational. To empower users to add mechanical movements to their models for particular needs, we first investigate the commonly used 3D printable mechanisms and parameterize four mechanical primitives. We then provide a computational approach to reconfigure the mechanical primitives to user-provided 3D models, with an underlying structural optimization procedure according to a specified bending force. We further showcase a set of design examples and conduct a user study to demonstrate the potential of our approach in creating personalized functional artifacts.',
